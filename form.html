@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f1">
+        <table>
+            <tr>
+                <th>username</th>
+                <td>
+                    <input type="text" id="t1" >
+                </td>
+            </tr>
+    
+            <tr>
+                <th>password</th>
+                <td>
+                    <input type="password" id="t2">
+                </td>
+            </tr>
+    
+            <tr>
+                <th>
+                    <input type="button" value="click here" onclick="get_value()">
+                </th>
+            </tr>
+        </table>
+    </form>
+
+    <form name="f2">
+        <table>
+            <tr>
+                <th>username</th>
+                <td>
+                    <input type="text" id="t1" >
+                </td>
+            </tr>
+    
+            <tr>
+                <th>password</th>
+                <td>
+                    <input type="password" id="t2">
+                </td>
+            </tr>
+    
+            <tr>
+                <th>
+                    <input type="button" value="click here" onclick="check_value()">
+                </th>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function get_value() {
+            let x= document.f1.t1.value
+            let y= document.f1.t2.value
+            alert(`${x} ${y}`)
+        }
+            function check_value() {
+                let a= document.f2.t1.value
+                let b= document.f2.t2.value
+                alert(`${a} ${b}`)
+            }
+        
+    </script>
+</body>
+</html>

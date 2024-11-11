@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <h2 id="formTitle" class="text-2xl font-bold mb-6 text-center text-gray-800">Login</h2>
+        <form id="authForm" class="space-y-4">
+            <div id="nameField" class="hidden">
+                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+            </div>
+            <button type="submit" class="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Submit
+            </button>
+        </form>
+        <div class="mt-4 text-center">
+            <button id="toggleForm" class="text-sm text-indigo-600 hover:text-indigo-500">
+                Switch to Register
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const formTitle = document.getElementById('formTitle');
+        const nameField = document.getElementById('nameField');
+        const toggleFormButton = document.getElementById('toggleForm');
+        const authForm = document.getElementById('authForm');
+
+        let isLoginForm = true;
+
+        toggleFormButton.addEventListener('click', () => {
+            isLoginForm = !isLoginForm;
+            if (isLoginForm) {
+                formTitle.textContent = 'Login';
+                nameField.classList.add('hidden');
+                toggleFormButton.textContent = 'Switch to Register';
+            } else {
+                formTitle.textContent = 'Register';
+                nameField.classList.remove('hidden');
+                toggleFormButton.textContent = 'Switch to Login';
+            }
+        });
+
+        authForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(authForm);
+            const data = Object.fromEntries(formData.entries());
+            console.log('Form submitted:', data);
+            // Here you would typically send the data to your server
+            alert('Form submitted! Check console for details.');
+        });
+    </script>
+</body>
+</html>

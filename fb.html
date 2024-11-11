@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto flex items-center justify-between p-4">
+            <div class="flex items-center">
+                <img src="download.jpeg" alt="Facebook Logo" class="w-10 h-10 mr-2">
+                <input type="text" placeholder="Search Facebook" class="bg-gray-100 rounded-full px-4 py-2">
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="text-blue-500"><i class="fas fa-home fa-lg"></i></a></li>
+                    <li><a href="#" class="text-gray-600"><i class="fas fa-tv fa-lg"></i></a></li>
+                    <li><a href="#" class="text-gray-600"><i class="fas fa-store fa-lg"></i></a></li>
+                    <li><a href="#" class="text-gray-600"><i class="fas fa-users fa-lg"></i></a></li>
+                </ul>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="bg-gray-200 rounded-full p-2"><i class="fas fa-plus"></i></a>
+                <a href="#" class="bg-gray-200 rounded-full p-2"><i class="fas fa-comment"></i></a>
+                <a href="#" class="bg-gray-200 rounded-full p-2"><i class="fas fa-bell"></i></a>
+                <img src="download.jpeg" alt="Profile" class="w-8 h-8 rounded-full">
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-6 flex">
+        <aside class="w-1/4 pr-4">
+            <ul class="space-y-2">
+                <li><a href="#" class="flex items-center"><img src="v.jpeg" alt="Profile" class="w-8 h-8 rounded-full mr-2"> Your Name</a></li>
+                <li><a href="#" class="flex items-center"><i class="fas fa-user-friends mr-2"></i> Friends</a></li>
+                <li><a href="#" class="flex items-center"><i class="fas fa-users mr-2"></i> Groups</a></li>
+                <li><a href="#" class="flex items-center"><i class="fas fa-store mr-2"></i> Marketplace</a></li>
+                <li><a href="#" class="flex items-center"><i class="fas fa-tv mr-2"></i> Watch</a></li>
+                <li><a href="#" class="flex items-center"><i class="fas fa-history mr-2"></i> Memories</a></li>
+            </ul>
+        </aside>
+
+        <div class="w-1/2 px-4">
+            <div class="bg-white rounded-lg shadow p-4 mb-4">
+                <div class="flex items-center mb-4">
+                    <img src="v.jpeg" alt="Profile" class="w-10 h-10 rounded-full mr-2">
+                    <input type="text" placeholder="What's on your mind?" class="bg-gray-100 rounded-full px-4 py-2 w-full">
+                </div>
+                <div class="flex justify-between">
+                    <button class="flex items-center"><i class="fas fa-video text-red-500 mr-2"></i> Live Video</button>
+                    <button class="flex items-center"><i class="fas fa-images text-green-500 mr-2"></i> Photo/Video</button>
+                    <button class="flex items-center"><i class="fas fa-smile text-yellow-500 mr-2"></i> Feeling/Activity</button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-4 mb-4">
+                <div class="flex items-center mb-4">
+                    <img src="v.jpeg" alt="Friend's Profile" class="w-10 h-10 rounded-full mr-2">
+                    <div>
+                        <h3 class="font-bold">Friend's Name</h3>
+                        <p class="text-gray-500 text-sm">2 hours ago</p>
+                    </div>
+                </div>
+                <p class="mb-4">This is a sample post content. It can be much longer and include multiple paragraphs.</p>
+                <img src="samsung.jpeg" alt="Post Image" class="w-full rounded-lg mb-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex space-x-2">
+                        <button class="flex items-center"><i class="fas fa-thumbs-up text-blue-500 mr-1"></i> Like</button>
+                        <button class="flex items-center"><i class="fas fa-comment mr-1"></i> Comment</button>
+                        <button class="flex items-center"><i class="fas fa-share mr-1"></i> Share</button>
+                    </div>
+                    <p class="text-gray-500 text-sm">15 comments</p>
+                </div>
+            </div>
+        </div>
+
+        <aside class="w-1/4 pl-4">
+            <div class="bg-white rounded-lg shadow p-4 mb-4">
+                <h3 class="font-bold mb-2">Sponsored</h3>
+                <img src="m.jpeg" alt="Ad" class="w-full rounded-lg mb-2">
+                <p class="text-sm">This is a sponsored ad. Click to learn more about our products and services.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+                <h3 class="font-bold mb-2">Contacts</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-center"><img src="v.jpeg" alt="Friend 1" class="w-8 h-8 rounded-full mr-2"> Friend 1</li>
+                    <li class="flex items-center"><img src="v.jpeg" alt="Friend 2" class="w-8 h-8 rounded-full mr-2"> Friend 2</li>
+                    <li class="flex items-center"><img src="v.jpeg" alt="Friend 3" class="w-8 h-8 rounded-full mr-2"> Friend 3</li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <script>
+        // You can add JavaScript functionality here
+        // For example, handling likes, comments, or post creation
+        document.addEventListener('DOMContentLoaded', () => {
+            const likeButtons = document.querySelectorAll('button:contains("Like")');
+            likeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    button.classList.toggle('text-blue-500');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

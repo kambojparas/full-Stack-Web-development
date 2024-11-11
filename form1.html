@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #al{
+            background-color: red;
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+   <form  action=""   name="f1" id="form_1">
+    <div><h4 id="al"></h4></div>
+        <table>
+            <tr>
+                <th>Enter the Username</th>
+                <td>
+                    <input type="text" id="t1">
+                </td>
+            </tr>
+    
+            <tr>
+                <th>Enter the password</th>
+                <td>
+                    <input type="text" id="t2">
+                </td>
+            </tr>
+
+
+            <tr>
+                <th>country</th>
+                <td>
+                    <select   id="t3">
+                        <option value="">--select any</option>
+                        <option value="1">india</option>
+                        <option value="1">australia</option>
+                        <option value="1">USA</option>
+                    </select>
+                </td>
+            </tr>
+    
+            <tr>
+               <td>
+                <input type="button" value="click here" onclick="btn1()">
+               </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+        <script>
+                function btn1() {
+                    document.getElementById('al').innerHTML="";
+                   let user=document.getElementById("t1").value;
+                   let pass=document.getElementById("t2").value;
+                   let con=document.getElementById("t3").value;
+                        
+                if (user =="" && pass =="" && con ==""){
+                    document.getElementById('al').innerHTML='⚠️⚠️Please Enter Username, password, and select country⚠️⚠️';
+                }
+                else if (user =="" && pass=="") {
+                    document.getElementById('al').innerHTML='⚠️⚠️Please Enter Username, password⚠️⚠️';
+                }
+                else if (pass =="" && con=="") {
+                    document.getElementById('al').innerHTML='⚠️⚠️Please Enter password, and  select country⚠️⚠️';
+                  } 
+                else if (user =="" && con =="") {
+                    document.getElementById('al').innerHTML='⚠️⚠️Please Enter Username, and select country⚠️⚠️';
+                  } 
+                else if (user =="") {
+                    document.getElementById('al').innerHTML='⚠️⚠️Please Enter Username⚠️⚠️';  
+                  }
+                else if (pass =="") {
+                    document.getElementById('al').innerHTML='⚠️⚠️Please Enter password⚠️⚠️';
+                  }
+                else if (con =="") {
+                    document.getElementById('al').innerHTML='⚠️⚠️Please Enter select country⚠️⚠️';
+                  }
+                  
+                }
+            </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          

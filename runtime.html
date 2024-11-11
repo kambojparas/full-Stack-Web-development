@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>username</th>
+            <td>
+                <input type="text" id="t1">
+            </td>
+        </tr>
+
+        <tr>
+            <th>password</th>
+            <td>
+                <input type="password" id="t2">
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+                <input type="button" value="click here" onclick="get_value()">
+            </th>
+        </tr>
+    </table>
+
+    <script>
+        function get_value() {
+            let x =document.getElementById('t1').value
+            let y =document.getElementById('t2').value
+            alert(`${x} ${y}`)
+
+            if(x == 'admin' && y == 'Admin123'){
+                alert(`valid credential`)
+                window.location.href = 'welcome.html'
+            }
+            else{
+                alert('invalid credential')
+            }
+        }
+    </script>
+</body>
+</html>

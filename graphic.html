@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Page</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Config for animations -->
+    <style>
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .bounce {
+            animation: bounce 1s infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col justify-center items-center min-h-screen">
+
+    <!-- Animated Header -->
+    <h1 class="text-4xl font-bold text-blue-600 fade-in">
+        Welcome to the Animated Page
+    </h1>
+
+    <!-- Button with hover and bounce effect -->
+    <button id="animateBtn" class="mt-10 px-8 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-700 bounce">
+        Hover me
+    </button>
+
+    <!-- Animated box using JavaScript -->
+    <div id="box" class="mt-10 w-32 h-32 bg-red-500 rounded-lg transform transition-all duration-700"></div>
+
+    <!-- JavaScript for custom animation -->
+    <script>
+        const animateBtn = document.getElementById('animateBtn');
+        const box = document.getElementById('box');
+
+        // Add click event to animate the box
+        animateBtn.addEventListener('click', () => {
+            box.classList.toggle('translate-x-52');
+            box.classList.toggle('bg-green-500');
+        });
+    </script>
+
+</body>
+</html>

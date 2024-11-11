@@ -1,0 +1,28 @@
+.game-container {  
+   @apply w-full h-screen flex justify-center items-center;  
+   background-color: #f7f7f7;  
+ }  
+   
+ .bird {  
+   @apply w-12 h-12 bg-yellow-500 rounded-full;  
+   position: absolute;  
+   top: 50%;  
+   left: 50%;  
+   transform: translate(-50%, -50%);  
+ }  
+   
+ .pipe {  
+   @apply w-12 h-12 bg-green-500;  
+  position: absolute;  
+ top: 50%;  
+  left: 50%;  
+ transform: translate(-50%, -50%);  
+ }  
+   
+ .score {  
+ @apply text-3xl font-bold text-gray-600;  
+position: absolute;  
+ top: 10px;  
+ left: 10px;  
+ }
+ 

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        netflixRed: '#e50914',
+                        netflixBlack: '#141414',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-netflixBlack text-white">
+    <header class="fixed top-0 z-50 w-full flex items-center justify-between px-4 py-2 bg-gradient-to-b from-black to-transparent">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="w-28">
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#" class="hover:text-gray-300">TV Shows</a></li>
+                <li><a href="#" class="hover:text-gray-300">Movies</a></li>
+                <li><a href="#" class="hover:text-gray-300">New & Popular</a></li>
+                <li><a role="button" class=" e1ax5wel2 ew97par0 default-ltr-cache-1wafeu3-PressableAnchor-StyledPressable-StyledPressable e1ff4m3w1" data-uia="header-login-link" href="/in/login">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="relative h-screen flex items-center">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/f6d7434e-d6de-4185-a6d4-c77a2d08737b/US-en-20220502-popsignuptwoweeks-perspective_alpha_website_medium.jpg');"></div>
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            <div class="relative z-10 max-w-3xl mx-auto text-center">
+                <h1 class="text-5xl font-bold mb-4">Unlimited movies, TV shows, and more.</h1>
+                <p class="text-2xl mb-8">Watch anywhere. Cancel anytime.</p>
+                <button class="bg-netflixRed text-white px-8 py-3 rounded text-xl font-bold hover:bg-red-700 transition duration-300">Get Started</button>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <h2 class="text-3xl font-bold mb-8 px-4">Popular on Netflix</h2>
+            <div class="flex overflow-x-scroll pb-8 hide-scroll-bar">
+                <div class="flex flex-nowrap space-x-4 px-4">
+                    <!-- Repeat this div for each movie thumbnail -->
+                    <div class="inline-block">
+                        <img src="images.jpeg" alt="Movie" class="w-40 h-60 object-cover rounded transition duration-300 hover:scale-110">
+                    </div>
+                    <div class="inline-block">
+                        <img src="Black Modern Movie NIght Poster.jpg" alt="Movie" class="w-40 h-60 object-cover rounded transition duration-300 hover:scale-110">
+                    </div>
+                    <div class="inline-block">
+                        <img src="x.jpeg" alt="Movie" class="w-40 h-60 object-cover rounded transition duration-300 hover:scale-110">
+                    </div>
+                    <div class="inline-block">
+                        <img src="animal.jpeg" alt="Movie" class="w-40 h-60 object-cover rounded transition duration-300 hover:scale-110">
+                    </div>
+                    <div class="inline-block">
+                        <img src="avatar.jpeg" alt="Movie" class="w-40 h-60 object-cover rounded transition duration-300 hover:scale-110">
+                    </div>
+                    <div class="inline-block">
+                        <img src="99.jpeg" alt="Movie" class="w-40 h-60 object-cover rounded transition duration-300 hover:scale-110">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <h2 class="text-3xl font-bold mb-8 px-4">Trending Now</h2>
+            <div class="flex overflow-x-scroll pb-8 hide-scroll-bar">
+                <div class="flex flex-nowrap space-x-4 px-4">
+                    <!-- Repeat this div for each movie thumbnail -->
+                    <div class="inline-block">
+                        <img src="66.jpeg" alt="Movie" class="w-40 h-60 object-cover rounded transition duration-300 hover:scale-110">
+                    </div>
+                    <div class="inline-block">
+                        <img src="marvel.jpeg" alt="Movie" class="w-40 h-60 object-cover rounded transition duration-300 hover:scale-110">
+                    </div>
+                    <div class="inline-block">
+                        <img src="q.jpeg" alt="Movie" class="w-40 h-60 object-cover rounded transition duration-300 hover:scale-110">
+                    </div>
+                    <div class="inline-block">
+                        <img src="punjab.jpeg" alt="Movie" class="w-40 h-60 object-cover rounded transition duration-300 hover:scale-110">
+                    </div>
+                    <div class="inline-block">
+                        <img src="enlish.jpeg" alt="Movie" class="w-40 h-60 object-cover rounded transition duration-300 hover:scale-110">
+                    </div>
+                    <div class="inline-block">
+                        <img src="south.jpeg" alt="Movie" class="w-40 h-60 object-cover rounded transition duration-300 hover:scale-110">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black py-8 px-4">
+      <input autocomplete="email" minlength="5" maxlength="50" type="email" id=":r3:" name="email" data-uia="field-email" placeholder="Email" value="">
+        <div class="max-w-6xl mx-auto">
+            <p class="text-gray-500 text-sm">&copy; 2023 Netflix Clone. All rights reserved.</p>
+        </div>
+        
+    </footer>
+
+    <style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .hide-scroll-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .hide-scroll-bar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+
+    <script>
+        // Add any JavaScript functionality here
+        document.addEventListener('DOMContentLoaded', (event) => {
+            console.log('Netflix clone loaded');
+        });
+    </script>
+</body>
+</html>

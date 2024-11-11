@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        function Test() {
+            let obj = new Date()
+            let hrs = obj.getHours()
+            let min = obj.getMinutes()
+            let sec = obj.getSeconds()
+            let time = hrs + ":"+min + ":" +sec
+            document.getElementById('result').innerHTML=time
+             setTimeout("Test()",1000)
+                
+             
+        }
+        Test()
+    </script>
+</body>
+</html>

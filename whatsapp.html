@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Clone</title>
+  <script src="app.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <div class="flex h-screen">
+
+    <!-- Sidebar - Contacts -->
+    <div class="w-1/3 bg-gray-900 text-white">
+      <div class="p-4 border-b border-gray-700 flex items-center justify-between">
+        <h1 class="text-xl font-semibold">Chats</h1>
+        <button class="text-gray-400 hover:text-white">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Contacts list -->
+      <div class="overflow-y-auto h-full">
+        <div class="p-4 border-b border-gray-700 cursor-pointer hover:bg-gray-800">
+          <div class="flex items-center">
+            <img class="h-12 w-12 rounded-full" src="https://via.placeholder.com/150" alt="User Image">
+            <div class="ml-4">
+              <p class="text-lg font-semibold">John Doe</p>
+              <p class="text-sm text-gray-400">Hey, are you there?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 border-b border-gray-700 cursor-pointer hover:bg-gray-800">
+          <div class="flex items-center">
+            <img class="h-12 w-12 rounded-full" src="https://via.placeholder.com/150" alt="User Image">
+            <div class="ml-4">
+              <p class="text-lg font-semibold">Jane Smith</p>
+              <p class="text-sm text-gray-400">Let’s meet at 5pm!</p>
+            </div>
+          </div>
+        </div>
+        <!-- More contacts -->
+      </div>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="w-2/3 flex flex-col bg-white">
+      <!-- Chat Header -->
+      <div class="p-4 border-b flex items-center justify-between bg-gray-50">
+        <div class="flex items-center">
+          <img class="h-12 w-12 rounded-full" src="https://via.placeholder.com/150" alt="Chat User">
+          <div class="ml-4">
+            <p class="text-lg font-semibold">John Doe</p>
+            <p class="text-sm text-gray-500">Online</p>
+          </div>
+        </div>
+        <button class="text-gray-400 hover:text-black">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Messages -->
+      <div id="chatArea" class="flex-1 overflow-y-auto p-4">
+        <div class="text-left mb-4">
+          <p class="bg-gray-200 inline-block p-2 rounded-lg">Hey, how are you?</p>
+        </div>
+        <div class="text-right mb-4">
+          <p class="bg-blue-500 text-white inline-block p-2 rounded-lg">I am good, how about you?</p>
+        </div>
+      </div>
+
+      <!-- Message Input -->
+      <div class="p-4 border-t bg-gray-50">
+        <div class="flex items-center">
+          <input id="messageInput" type="text" class="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none" placeholder="Type a message">
+          <button id="sendMessage" class="ml-4 bg-blue-500 text-white p-2 rounded-lg">
+            Send
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+
+</html>

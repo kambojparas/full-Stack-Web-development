@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f1">
+        <table>     
+            <tr>
+                <td>
+                    <input type="checkbox" name="r1" value="sojo"/>play
+                    <input type="checkbox" name="r1" value="likho"/>read
+                    <input type="checkbox" name="r1" value="pado"/>chess 
+                    <input type="checkbox" name="r1" value="khelo"/>cricket
+                </td>
+            </tr>
+
+          <tr>
+                <th>
+                    <input type="button" value="click here" onclick="btn_1()">
+                </th>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+         function btn_1(){
+        //    alert(`hello`)
+            let choose ='';
+            let len = document.f1.r1.length;
+            // alert(len);
+            for(let i=0; i< len; i++){
+            if(document.f1.r1[i].checked){
+                choose = choose+" "+ document.f1.r1[i].value;
+            
+            }
+        }
+        if (choose == ''){
+            alert('please select atmost any one');
+        }else{
+            alert(`u select =${choose}`);
+        }
+        }
+
+    </script>
+</body>
+</html>
